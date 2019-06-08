@@ -18,25 +18,25 @@ import Model.*;
 public class Inscription {
     // Déclaration des attributs
     public String ID_inscription;
-    public String ID_classe;
-    public String ID_personne;
+    public Classe classe;
+    public Personne personne;
     
     public Inscription(){
         ID_inscription = new String();
-        ID_classe = new String();
-        ID_personne = new String();
+        classe = new Classe();
+        personne = new Personne();
     }
 
     /** Constructeur instanciant la classe
      * 
      * @param ID_inscription
-     * @param ID_classe
-     * @param ID_personne 
+     * @param classe
+     * @param personne 
      */
-    public Inscription(String ID_inscription, String ID_classe, String ID_personne) {
+    public Inscription(String ID_inscription, Classe classe, Personne personne) {
         this.ID_inscription = ID_inscription;
-        this.ID_classe = ID_classe;
-        this.ID_personne = ID_personne;
+        this.classe = classe;
+        this.personne = personne;
     }
     
     

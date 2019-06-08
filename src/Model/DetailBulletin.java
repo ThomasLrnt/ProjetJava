@@ -18,29 +18,29 @@ import Model.*;
 public class DetailBulletin {
     // Déclaration des attributs
     public String ID_detail;
-    public String ID_bulletin;
-    public String ID_enseignant;
+    public Bulletin bulletin;
+    public Enseignant enseignant;
     public String appreciation;
     
     // Constructeur par défaut
     public DetailBulletin(){
         ID_detail = new String();
-        ID_bulletin = new String();
-        ID_enseignant = new String();
+        bulletin = new Bulletin();
+        enseignant = new Enseignant();
         appreciation = new String();
     }
 
     /** Constructeur instanciant l'objet
      * 
      * @param ID_detail
-     * @param ID_bulletin
-     * @param ID_enseignant
+     * @param bulletin
+     * @param enseignant
      * @param appreciation 
      */
-    public DetailBulletin(String ID_detail, String ID_bulletin, String ID_enseignant, String appreciation) {
+    public DetailBulletin(String ID_detail, Bulletin bulletin, Enseignant enseignant, String appreciation) {
         this.ID_detail = ID_detail;
-        this.ID_bulletin = ID_bulletin;
-        this.ID_enseignant = ID_enseignant;
+        this.bulletin = bulletin;
+        this.enseignant = enseignant;
         this.appreciation = appreciation;
     }
     

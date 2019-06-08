@@ -18,21 +18,31 @@ import Model.*;
 public class AnneeScolaire {
     // Déclaration des attributs
     public String ID_annee;
+    private Trimestre T1, T2, T3;
     
     /** Constructeur par défaut :
      * 
      */
     public AnneeScolaire() {
-      ID_annee = new String();  
+      ID_annee = new String();
+      T1 = new Trimestre();
+      T3 = new Trimestre();
+      T2 = new Trimestre();
     }
+
     
     /** Constructeur instanciant l'objet
      * 
-     * @param ID_annee 
+     * @param ID_annee
+     * @param T1
+     * @param T2
+     * @param T3 
      */
-    public AnneeScolaire(String ID_annee) {
+    public AnneeScolaire(String ID_annee, Trimestre T1, Trimestre T2, Trimestre T3) {
         this.ID_annee = ID_annee;
+        this.T1 = T1;
+        this.T2 = T2;
+        this.T3 = T3;
     }
-    
-    
+
 }
