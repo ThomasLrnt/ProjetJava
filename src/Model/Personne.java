@@ -16,5 +16,6 @@ import Model.*;
  * @author Thomas LAURENT, Pierre-Louis DESOULTRAIT, Martin DESCOTTES
  */
 public class Personne {
+    // Déclaration des attributs
     
 }

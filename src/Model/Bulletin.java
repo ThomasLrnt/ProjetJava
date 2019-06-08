@@ -10,11 +10,38 @@ import Control.*;
 import Model.*;
 
 // Importation de bibliothèques
+import java.util.*;
 
 /**
  *
  * @author Thomas LAURENT, Pierre-Louis DESOULTRAIT, Martin DESCOTTES
  */
 public class Bulletin {
+     
+    // Déclaration des attributs
+    public String ID_bulletin;
+    public String ID_Trimestre;
+    public ArrayList Appreciation;
+    
+    // Constructeur par défaut
+    public Bulletin() {
+        ID_bulletin = new String();
+        ID_Trimestre = new String();
+        Appreciation = new ArrayList();
+    }
+
+    /** Constructeur instanciant l'objet
+     * 
+     * @param ID_bulletin
+     * @param ID_Trimestre
+     * @param Appreciation 
+     */
+    public Bulletin(String ID_bulletin, String ID_Trimestre, ArrayList Appreciation) {
+        this.ID_bulletin = ID_bulletin;
+        this.ID_Trimestre = ID_Trimestre;
+        this.Appreciation = Appreciation;
+    }
+    
+    
     
 }
