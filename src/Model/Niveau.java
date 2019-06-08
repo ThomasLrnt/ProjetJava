@@ -5,6 +5,12 @@
  */
 package Model;
 
+// Importation des autres classes
+import Control.*;
+import Model.*;
+
+// Importation de bibliothèques
+
 /**
  *
  * @author Thomas LAURENT, Pierre-Louis DESOULTRAIT, Martin DESCOTTES

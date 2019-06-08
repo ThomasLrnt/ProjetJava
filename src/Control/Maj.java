@@ -1,9 +1,13 @@
 /*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
+ * Classe permettant la mise à jour des données
  */
 package Control;
+
+// Importation des autres classes
+import Control.*;
+import Model.*;
+
+// Importation de bibliothèques
 
 /**
  *
