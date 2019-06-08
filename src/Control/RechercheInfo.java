@@ -3,12 +3,12 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package Model;
+package Control;
 
 /**
  *
- * @author Thomas LAURENT, Pierre-Louis DESOULTRAIT, Martin DESCOTTES
+ * @author laure
  */
-public class Classe {
+public class RechercheInfo {
     
 }

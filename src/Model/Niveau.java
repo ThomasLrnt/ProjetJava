@@ -7,7 +7,7 @@ package Model;
 
 /**
  *
- * @author laure
+ * @author Thomas LAURENT, Pierre-Louis DESOULTRAIT, Martin DESCOTTES
  */
 public class Niveau {
     
