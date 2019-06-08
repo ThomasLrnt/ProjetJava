@@ -3,8 +3,12 @@
  */
 package projetjava;
 
-// Importation des bibliothèques
+// Importation des bibliothèques usuelles
+import java.lang.*;
+import java.util.*;
+// Importation des ressources
 
+// Importation des autres packages
 
 /**
  * @author Thomas LAURENT, Pierre-Louis DE SOULTRAIT
