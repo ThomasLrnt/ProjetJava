@@ -14,5 +14,8 @@ import Model.*;
  * @author Thomas LAURENT, Pierre-Louis DESOULTRAIT, Martin DESCOTTES
  */
 public class RechercheInfo {
+    // Déclaration des attributs
+    
+    // Méthodes de recherche
     
 }
