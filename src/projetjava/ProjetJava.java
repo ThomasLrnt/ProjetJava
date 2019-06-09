@@ -30,9 +30,7 @@ public class ProjetJava {
         
         Maj maMaj = new Maj();
         
-        // test fonction ajoutAnnee
-        // Test OK
-        //maMaj.ajoutAnnee(2018);
+        //                   TEST DES FONCTIONS
         
         
     }

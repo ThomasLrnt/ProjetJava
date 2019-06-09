@@ -7,7 +7,7 @@ package Control;
 import Control.*;
 import Control.Connexion;
 import Model.*;
-import java.sql.SQLException;
+import java.sql.*;
 
 
 // Importation de bibliothèques
@@ -24,7 +24,11 @@ public class Maj {
     final String password = "";
     // Objet type connexion -> lien avec la base de donnée
     
-    /** Méthodes de Modification d'une année scolaire
+    
+    
+    //    LES METHODES D'AJOUT DANS LA BASE DE DONEE
+    
+    /** Méthodes d'ajout d'une année scolaire
      * 
      * @param id
      * @throws SQLException
@@ -34,12 +38,12 @@ public class Maj {
         // Objet type connexion -> lien avec la base de donnée
         Connexion maConnexion  = new Connexion(dbName,userName,password);
         // Création de la requete SQL
-        String req = "INSERT INTO annee_scolaire ('id') VALUES ("+id+");";
+        String req = "INSERT INTO annee_scolaire (id) VALUES ("+id+");";
         // Execution de la mise à jour
         maConnexion.executeUpdate(req);
     }
     
-    /** Méthodes de Modification d'une Ecole
+    /** Méthodes d'ajout d'une Ecole
      * 
      * @param id
      * @param nom
@@ -55,7 +59,7 @@ public class Maj {
         maConnexion.executeUpdate(req);
     }
     
-    /** Méthodes de Modification d'un Trimestre
+    /** Méthodes d'ajout d'un Trimestre
      * 
      * @param id
      * @param num
@@ -74,7 +78,7 @@ public class Maj {
         maConnexion.executeUpdate(req);
     }
     
-    /** Méthodes de Modification d'un Niveau
+    /** Méthodes d'ajout d'un Niveau
      * 
      * @param id
      * @param nom
@@ -90,7 +94,7 @@ public class Maj {
         maConnexion.executeUpdate(req);
     }
     
-    /** Méthodes de Modification d'une classe
+    /** Méthodes d'ajout d'une classe
      * 
      * @param id
      * @param nom
@@ -109,7 +113,7 @@ public class Maj {
         maConnexion.executeUpdate(req);
     }
     
-    /** Méthodes de Modification d'une discipline
+    /** Méthodes d'ajout d'une discipline
      * 
      * @param id
      * @param nom
@@ -125,7 +129,7 @@ public class Maj {
         maConnexion.executeUpdate(req);
     }
     
-    /** Méthodes de Modification d'une personne
+    /** Méthodes d'ajout d'une personne
      * 
      * @param id
      * @param nom
@@ -161,7 +165,14 @@ public class Maj {
         maConnexion.executeUpdate(req);
     }
     
-    // Méthodes de Modification d'une inscription
+    /** Méthodes d'ajout d'une inscription
+     * 
+     * @param id
+     * @param id_classe
+     * @param id_personne
+     * @throws SQLException
+     * @throws ClassNotFoundException 
+     */
     public void ajoutInscription(int id, int id_classe, int id_personne) throws SQLException, ClassNotFoundException{
         // Objet type connexion -> lien avec la base de donnée
         Connexion maConnexion  = new Connexion(dbName,userName,password);
@@ -171,7 +182,7 @@ public class Maj {
         maConnexion.executeUpdate(req);
     }
     
-    /** Méthodes de Modification d'un bulletin
+    /** Méthodes d'ajout d'un bulletin
      * 
      * @param id
      * @param id_trimestre
@@ -184,12 +195,12 @@ public class Maj {
         // Objet type connexion -> lien avec la base de donnée
         Connexion maConnexion  = new Connexion(dbName,userName,password);
         // Création de la requete SQL
-        String req = "INSERT INTO bulletin ('id', 'id_trimestre','id_inscription','appreciation') VALUES ("+id+","+id_trimestre+","+id_inscription+","+appreciation+");";
+        String req = "INSERT INTO bulletin (id, id_trimestre, id_inscription, appreciation) VALUES ("+id+","+id_trimestre+","+id_inscription+","+appreciation+");";
         // Execution de la mise à jour
         maConnexion.executeUpdate(req);
     }
     
-    /** Méthodes de Modification d'un detail de Bulletin
+    /** Méthodes d'ajout d'un detail de Bulletin
      * 
      * @param id
      * @param id_bulletin
@@ -207,7 +218,7 @@ public class Maj {
         maConnexion.executeUpdate(req);
     }
     
-    /** Méthodes de Modification d'une evaluation
+    /** Méthodes d'ajout d'une evaluation
      * 
      * @param id
      * @param id_detail_bulletin
@@ -224,5 +235,193 @@ public class Maj {
         // Execution de la mise à jour
         maConnexion.executeUpdate(req);
     }
+    
+    
+    
+    //      METHODE DE SUPPRESSION DANS LA BASE DE DONNEE
+    
+    /** Méthodes de suppression d'une année scolaire
+     * 
+     * @param id
+     * @throws SQLException
+     * @throws ClassNotFoundException 
+     */
+    public void supprimerAnnee(int id) throws SQLException, ClassNotFoundException{
+        // Objet type connexion -> lien avec la base de donnée
+        Connexion maConnexion  = new Connexion(dbName,userName,password);
+        // Création de la requete SQL
+        String req = "DELETE FROM annee_scolaire WHERE id="+id+";";
+        // Execution de la mise à jour
+        maConnexion.executeUpdate(req);
+    }
+    
+    /** Méthodes de suppression d'une Ecole
+     * 
+     * @param nom
+     * @throws SQLException
+     * @throws ClassNotFoundException 
+     */
+    public void supprimerEcole(String nom) throws SQLException, ClassNotFoundException{
+        // Objet type connexion -> lien avec la base de donnée
+        Connexion maConnexion  = new Connexion(dbName,userName,password);
+        // Création de la requete SQL
+        String req = "DELETE FROM ecole WHERE nom="+nom+";";
+        // Execution de la mise à jour
+        maConnexion.executeUpdate(req);
+    }
+    
+    /** Méthodes de suppression d'un trimestre
+     * 
+     * @param num
+     * @param id_annee
+     * @throws SQLException
+     * @throws ClassNotFoundException 
+     */
+    public void supprimerTrimestre(int num, int id_annee) throws SQLException, ClassNotFoundException{
+        // Objet type connexion -> lien avec la base de donnée
+        Connexion maConnexion  = new Connexion(dbName,userName,password);
+        // Création de la requete SQL
+        String req = "DELETE FROM trimestre WHERE numero="+num+" AND id_annee_scolaire="+id_annee+";";
+        // Execution de la mise à jour
+        maConnexion.executeUpdate(req);
+    }
+    
+    /** Méthodes de suppression d'un niveau
+     * 
+     * @param nom
+     * @throws SQLException
+     * @throws ClassNotFoundException 
+     */
+    public void supprimerNiveau(String nom) throws SQLException, ClassNotFoundException{
+        // Objet type connexion -> lien avec la base de donnée
+        Connexion maConnexion  = new Connexion(dbName,userName,password);
+        // Création de la requete SQL
+        String req = "DELETE FROM niveau WHERE nom ="+nom+";";
+        // Execution de la mise à jour
+        maConnexion.executeUpdate(req);
+    }
+    
+    /** Méthodes de suppression d'une classe
+     * 
+     * @param id
+     * @throws SQLException
+     * @throws ClassNotFoundException 
+     */
+    public void supprimerClasse(int id) throws SQLException, ClassNotFoundException{
+        // Objet type connexion -> lien avec la base de donnée
+        Connexion maConnexion  = new Connexion(dbName,userName,password);
+        // Création de la requete SQL
+        String req = "DELETE FROM classe WHERE id="+id+";";
+        // Execution de la mise à jour
+        maConnexion.executeUpdate(req);
+    }
+    
+    /** Méthodes de supression d'une discipline
+     * 
+     * @param id
+     * @throws SQLException
+     * @throws ClassNotFoundException 
+     */
+    public void supprimerDiscipline(int id) throws SQLException, ClassNotFoundException{
+        // Objet type connexion -> lien avec la base de donnée
+        Connexion maConnexion  = new Connexion(dbName,userName,password);
+        // Création de la requete SQL
+        String req = "DELETE FROM discipline WHERE id="+id+";";
+        // Execution de la mise à jour
+        maConnexion.executeUpdate(req);
+    }
+    
+    /** Méthodes de supression d'une personne
+     * 
+     * @param nom
+     * @param prenom
+     * @throws SQLException
+     * @throws ClassNotFoundException 
+     */
+    public void supprimerPersonne(String nom, String prenom) throws SQLException, ClassNotFoundException{
+        // Objet type connexion -> lien avec la base de donnée
+        Connexion maConnexion  = new Connexion(dbName,userName,password);
+        // Création de la requete SQL
+        String req = "DELETE FROM personne WHERE nom="+nom+" AND prenom="+prenom+";";
+        // Execution de la mise à jour
+        maConnexion.executeUpdate(req);
+    }
+    
+    /** Méthode de suppression d'un enseignant
+     * 
+     * @param id
+     * @throws SQLException
+     * @throws ClassNotFoundException 
+     */
+    public void supprimerEnseignant(int id) throws SQLException, ClassNotFoundException{
+        // Objet type connexion -> lien avec la base de donnée
+        Connexion maConnexion  = new Connexion(dbName,userName,password);
+        // Création de la requete SQL
+        String req = "DELETE FROM enseignement WHERE id="+id+";";
+        // Execution de la mise à jour
+        maConnexion.executeUpdate(req);
+    }
+    
+    /** Méthodes de supression d'une inscription
+     * 
+     * @param id
+     * @throws SQLException
+     * @throws ClassNotFoundException 
+     */
+    public void supprimerInscription(int id) throws SQLException, ClassNotFoundException{
+        // Objet type connexion -> lien avec la base de donnée
+        Connexion maConnexion  = new Connexion(dbName,userName,password);
+        // Création de la requete SQL
+        String req = "DELETE FROM inscription WHERE id="+id+";";
+        // Execution de la mise à jour
+        maConnexion.executeUpdate(req);
+    }
+    
+    /** Méthodes de supression d'un bulletin
+     * 
+     * @param id_trimestre
+     * @param id_inscription
+     * @throws SQLException
+     * @throws ClassNotFoundException 
+     */
+    public void supprimerBulletin(int id_trimestre, int id_inscription) throws SQLException, ClassNotFoundException{
+        // Objet type connexion -> lien avec la base de donnée
+        Connexion maConnexion  = new Connexion(dbName,userName,password);
+        // Création de la requete SQL
+        String req = "DELETE FROM bulletin WHERE id_trimestre="+id_trimestre+" AND id_inscription = "+id_inscription+";";
+        // Execution de la mise à jour
+        maConnexion.executeUpdate(req);
+    }
+    
+    /** Méthodes de supression d'un detail de Bulletin
+     * 
+     * @param appreciation
+     * @throws SQLException
+     * @throws ClassNotFoundException 
+     */
+    public void supprimerDetailBulletin(String appreciation) throws SQLException, ClassNotFoundException{
+        // Objet type connexion -> lien avec la base de donnée
+        Connexion maConnexion  = new Connexion(dbName,userName,password);
+        // Création de la requete SQL
+        String req = "DELETE FROM detail_bulletin WHERE appreciation="+appreciation+";";
+        // Execution de la mise à jour
+        maConnexion.executeUpdate(req);
+    }
+    
+    /** Méthodes de suppression d'une evaluation
+     * 
+     * @param id
+     * @throws SQLException
+     * @throws ClassNotFoundException 
+     */
+    public void supprimerEvaluation(int id) throws SQLException, ClassNotFoundException{
+        // Objet type connexion -> lien avec la base de donnée
+        Connexion maConnexion  = new Connexion(dbName,userName,password);
+        // Création de la requete SQL
+        String req = "DELETE FROM annee_scolaire WHERE id="+id+";";
+        // Execution de la mise à jour
+        maConnexion.executeUpdate(req);
+    }
+    
     
 }
