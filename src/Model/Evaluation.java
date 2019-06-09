@@ -45,6 +45,41 @@ public class Evaluation {
         this.appreciation = appreciation;
     }
     
+    // Getters et Setters
+
+    public String getID_evaluation() {
+        return ID_evaluation;
+    }
+
+    public void setID_evaluation(String ID_evaluation) {
+        this.ID_evaluation = ID_evaluation;
+    }
+
+    public String getID_detail() {
+        return ID_detail;
+    }
+
+    public void setID_detail(String ID_detail) {
+        this.ID_detail = ID_detail;
+    }
+
+    public int getNote() {
+        return note;
+    }
+
+    public void setNote(int note) {
+        this.note = note;
+    }
+
+    public String getAppreciation() {
+        return appreciation;
+    }
+
+    public void setAppreciation(String appreciation) {
+        this.appreciation = appreciation;
+    }
+    
+    
     
     
 }
