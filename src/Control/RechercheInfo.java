@@ -16,6 +16,30 @@ import Model.*;
 public class RechercheInfo {
     // Déclaration des attributs
     
-    // Méthodes de recherche
+    // Méthodes de recherche d'une école
+    
+    // Méthodes de recherche d'une Année scolaire
+    
+    // Méthodes de recherche d'un trimestre
+    
+    // Méthodes de recherche d'un Niveau
+    
+    // Méthodes de recherche d'une classe
+    
+    // Méthodes de recherche d'une Dsicipline
+    
+    // Méthodes de recherche d'une personne
+    
+    // Méthodes de recherche d'un enseignant
+    
+    // Méthodes de recherche d'un Bulletin
+    
+    // Méthodes de recherche d'un détail de bulletin
+    
+    // Méthodes de recherche d'une Evaluation
+    
+    
+    
+    
     
 }
