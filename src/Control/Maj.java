@@ -10,8 +10,7 @@ import Model.*;
 import java.sql.*;
 
 
-// Importation de bibliothèques
-import java.util.*;
+// Importation de bibliothèque utiles
 
 /**
  *
@@ -35,12 +34,15 @@ public class Maj {
      * @throws ClassNotFoundException 
      */
     public void ajoutAnnee(int id) throws SQLException, ClassNotFoundException{
+        try{
         // Objet type connexion -> lien avec la base de donnée
         Connexion maConnexion  = new Connexion(dbName,userName,password);
         // Création de la requete SQL
         String req = "INSERT INTO annee_scolaire (id) VALUES ("+id+");";
         // Execution de la mise à jour
         maConnexion.executeUpdate(req);
+        }catch(SQLException e){
+        }
     }
     
     /** Méthodes d'ajout d'une Ecole
