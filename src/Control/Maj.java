@@ -25,7 +25,7 @@ public class Maj {
     // Objet type connexion -> lien avec la base de donnée
     
     // Méthodes de Modification d'une année scolaire
-    public void ajoutAnnee(String id) throws SQLException, ClassNotFoundException{
+    public void ajoutAnnee(int id) throws SQLException, ClassNotFoundException{
         // Objet type connexion -> lien avec la base de donnée
         Connexion maConnexion  = new Connexion(dbName,userName,password);
         // Création de la requete SQL

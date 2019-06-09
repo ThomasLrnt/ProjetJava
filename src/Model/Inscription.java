@@ -17,14 +17,14 @@ import Model.*;
  */
 public class Inscription {
     // Déclaration des attributs
-    public String ID_inscription;
-    public String ID_classe;
-    public String ID_personne;
+    public int ID_inscription;
+    public int ID_classe;
+    public int ID_personne;
     
     public Inscription(){
-        ID_inscription = new String();
-        ID_classe = new String();
-        ID_personne = new String();
+        ID_inscription = 0;
+        ID_classe = 0;
+        ID_personne = 0;
     }
 
     /** Constructeur instanciant la classe
@@ -33,7 +33,7 @@ public class Inscription {
      * @param ID_classe
      * @param ID_personne 
      */
-    public Inscription(String ID_inscription, String ID_classe, String ID_personne) {
+    public Inscription(int ID_inscription, int ID_classe, int ID_personne) {
         this.ID_inscription = ID_inscription;
         this.ID_classe = ID_classe;
         this.ID_personne = ID_personne;
@@ -41,27 +41,27 @@ public class Inscription {
     
     // Getters et Setters
 
-    public String getID_inscription() {
+    public int getID_inscription() {
         return ID_inscription;
     }
 
-    public void setID_inscription(String ID_inscription) {
+    public void setID_inscription(int ID_inscription) {
         this.ID_inscription = ID_inscription;
     }
 
-    public String getID_classe() {
+    public int getID_classe() {
         return ID_classe;
     }
 
-    public void setID_classe(String ID_classe) {
+    public void setID_classe(int ID_classe) {
         this.ID_classe = ID_classe;
     }
 
-    public String getID_personne() {
+    public int getID_personne() {
         return ID_personne;
     }
 
-    public void setID_personne(String ID_personne) {
+    public void setID_personne(int ID_personne) {
         this.ID_personne = ID_personne;
     }
     

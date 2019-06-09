@@ -18,12 +18,12 @@ import Model.*;
 public class Ecole {
     
     // Déclaration des attributs
-    public String ID_ecole;
+    public int ID_ecole;
     public String NomEcole;
     
     // Constructeur par défaut
     public Ecole(){
-        ID_ecole = new String();
+        ID_ecole = 0;
         NomEcole = new String();
     }
 
@@ -32,7 +32,7 @@ public class Ecole {
      * @param ID_ecole
      * @param NomEcole 
      */
-    public Ecole(String ID_ecole, String NomEcole) {
+    public Ecole(int ID_ecole, String NomEcole) {
         this.ID_ecole = ID_ecole;
         this.NomEcole = NomEcole;
     }
@@ -40,11 +40,11 @@ public class Ecole {
     
     // Getters et setters
 
-    public String getID_ecole() {
+    public int getID_ecole() {
         return ID_ecole;
     }
 
-    public void setID_ecole(String ID_ecole) {
+    public void setID_ecole(int ID_ecole) {
         this.ID_ecole = ID_ecole;
     }
 

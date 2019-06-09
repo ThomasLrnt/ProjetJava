@@ -16,20 +16,20 @@ import Model.*;
  * @author Thomas LAURENT, Pierre-Louis DESOULTRAIT, Martin DESCOTTES
  */
 public class Enseignant extends Personne {
-    public String ID_enseignant;
-    public String ID_classe;
-    public String ID_discipline;
-    public String ID_personne;
+    public int ID_enseignant;
+    public int ID_classe;
+    public int ID_discipline;
+    public int ID_personne;
     
     // Constructeur par défaut
     public Enseignant(){
         super();
-        ID_enseignant = new String();
-        ID_classe = new String();
-        ID_discipline = new String();
+        ID_enseignant = 0;
+        ID_classe = 0;
+        ID_discipline = 0;
     }
 
-    public Enseignant(String ID_enseignant, String ID_classe, String ID_discipline, String ID_personne) {
+    public Enseignant(int ID_enseignant, int ID_classe, int ID_discipline, int ID_personne) {
         this.ID_enseignant = ID_enseignant;
         this.ID_classe = ID_classe;
         this.ID_discipline = ID_discipline;
@@ -46,7 +46,7 @@ public class Enseignant extends Personne {
      * @param prenom
      * @param type 
      */
-    public Enseignant(String ID_enseignant, String ID_classe, String ID_discipline, String ID_personne, String nom, String prenom, String type) {
+    public Enseignant(int ID_enseignant, int ID_classe, int ID_discipline, int ID_personne, String nom, String prenom, String type) {
         super(ID_personne, nom, prenom, type);
         this.ID_enseignant = ID_enseignant;
         this.ID_classe = ID_classe;
@@ -57,35 +57,35 @@ public class Enseignant extends Personne {
     
     // Getters et Setters
 
-    public String getID_enseignant() {
+    public int getID_enseignant() {
         return ID_enseignant;
     }
 
-    public void setID_enseignant(String ID_enseignant) {
+    public void setID_enseignant(int ID_enseignant) {
         this.ID_enseignant = ID_enseignant;
     }
 
-    public String getID_classe() {
+    public int getID_classe() {
         return ID_classe;
     }
 
-    public void setID_classe(String ID_classe) {
+    public void setID_classe(int ID_classe) {
         this.ID_classe = ID_classe;
     }
 
-    public String getID_discipline() {
+    public int getID_discipline() {
         return ID_discipline;
     }
 
-    public void setID_discipline(String ID_discipline) {
+    public void setID_discipline(int ID_discipline) {
         this.ID_discipline = ID_discipline;
     }
 
-    public String getID_personne() {
+    public int getID_personne() {
         return ID_personne;
     }
 
-    public void setID_personne(String ID_personne) {
+    public void setID_personne(int ID_personne) {
         this.ID_personne = ID_personne;
     }
 

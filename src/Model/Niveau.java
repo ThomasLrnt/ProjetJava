@@ -17,12 +17,12 @@ import Model.*;
  */
 public class Niveau {
     // Déclaration des attributs
-    public String ID_niveau;
+    public int ID_niveau;
     public String nom;
     
     // Constructeur par défaut
     public Niveau(){
-        ID_niveau = new String();
+        ID_niveau = 0;
         nom = new String();
     }
     
@@ -31,18 +31,18 @@ public class Niveau {
      * @param ID_niveau
      * @param nom 
      */
-    public Niveau(String ID_niveau, String nom) {
+    public Niveau(int ID_niveau, String nom) {
         this.ID_niveau = ID_niveau;
         this.nom = nom;
     }
     
     // Getters et Setters
 
-    public String getID_niveau() {
+    public int getID_niveau() {
         return ID_niveau;
     }
 
-    public void setID_niveau(String ID_niveau) {
+    public void setID_niveau(int ID_niveau) {
         this.ID_niveau = ID_niveau;
     }
 

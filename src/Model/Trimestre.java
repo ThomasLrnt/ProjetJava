@@ -17,19 +17,19 @@ import Model.*;
  */
 public class Trimestre {
     // Déclaration des attributs
-    public String ID_trimestre;
+    public int ID_trimestre;
     public int numero;
     public int debut;
     public int fin;
-    public String ID_annee;
+    public int ID_annee;
     
     // Constructeur par défaut
     public Trimestre(){
-        ID_trimestre = new String();
+        ID_trimestre = 0;
         numero = 0;
         debut = 0;
         fin = 0;
-        ID_annee = new String();
+        ID_annee = 0;
         
     }
     
@@ -41,7 +41,7 @@ public class Trimestre {
      * @param fin
      * @param ID_annee 
      */
-    public Trimestre(String ID_trimestre, int numero, int debut, int fin, String ID_annee) {
+    public Trimestre(int ID_trimestre, int numero, int debut, int fin, int ID_annee) {
         this.ID_trimestre = ID_trimestre;
         this.numero = numero;
         this.debut = debut;
@@ -51,11 +51,11 @@ public class Trimestre {
     
     // Getters et Setters
 
-    public String getID_trimestre() {
+    public int getID_trimestre() {
         return ID_trimestre;
     }
 
-    public void setID_trimestre(String ID_trimestre) {
+    public void setID_trimestre(int ID_trimestre) {
         this.ID_trimestre = ID_trimestre;
     }
 
@@ -83,11 +83,11 @@ public class Trimestre {
         this.fin = fin;
     }
 
-    public String getID_annee() {
+    public int getID_annee() {
         return ID_annee;
     }
 
-    public void setID_annee(String ID_annee) {
+    public void setID_annee(int ID_annee) {
         this.ID_annee = ID_annee;
     }
     

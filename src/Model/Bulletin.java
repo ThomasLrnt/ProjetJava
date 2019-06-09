@@ -19,16 +19,16 @@ import java.util.*;
 public class Bulletin {
      
     // Déclaration des attributs
-    public String ID_bulletin;
-    public String ID_trimestre;
-    public String ID_inscription;
+    public int ID_bulletin;
+    public int ID_trimestre;
+    public int ID_inscription;
     public ArrayList<String> Appreciation;
     
     // Constructeur par défaut
     public Bulletin() {
-        ID_bulletin = new String();
-        ID_trimestre = new String();
-        ID_inscription = new String();
+        ID_bulletin = 0;
+        ID_trimestre = 0;
+        ID_inscription = 0;
         Appreciation = new ArrayList();
     }
 
@@ -39,7 +39,7 @@ public class Bulletin {
      * @param ID_inscription
      * @param Appreciation 
      */
-    public Bulletin(String ID_bulletin, String ID_trimestre, String ID_inscription, ArrayList<String> Appreciation) {
+    public Bulletin(int ID_bulletin, int ID_trimestre, int ID_inscription, ArrayList<String> Appreciation) {
         this.ID_bulletin = ID_bulletin;
         this.ID_trimestre = ID_trimestre;
         this.ID_inscription = ID_inscription;
@@ -49,27 +49,27 @@ public class Bulletin {
     
     // Getters et setters
 
-    public String getID_bulletin() {
+    public int getID_bulletin() {
         return ID_bulletin;
     }
 
-    public void setID_bulletin(String ID_bulletin) {
+    public void setID_bulletin(int ID_bulletin) {
         this.ID_bulletin = ID_bulletin;
     }
 
-    public String getID_trimestre() {
+    public int getID_trimestre() {
         return ID_trimestre;
     }
 
-    public void setID_trimestre(String ID_trimestre) {
+    public void setID_trimestre(int ID_trimestre) {
         this.ID_trimestre = ID_trimestre;
     }
 
-    public String getID_inscription() {
+    public int getID_inscription() {
         return ID_inscription;
     }
 
-    public void setID_inscription(String ID_inscription) {
+    public void setID_inscription(int ID_inscription) {
         this.ID_inscription = ID_inscription;
     }
 

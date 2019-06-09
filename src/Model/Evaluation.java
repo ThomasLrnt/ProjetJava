@@ -18,15 +18,15 @@ import Model.*;
 
 public class Evaluation {
     // Déclaration des attributs
-    public String ID_evaluation;
-    public String ID_detail;
+    public int ID_evaluation;
+    public int ID_detail;
     public int note;
     public String appreciation;
     
     // Constructeur par défaut
     public Evaluation(){
-        ID_evaluation = new String();
-        ID_detail = new String();
+        ID_evaluation = 0;
+        ID_detail = 0;
         note = 0;
         appreciation = new String();
     }
@@ -38,28 +38,28 @@ public class Evaluation {
      * @param note
      * @param appreciation 
      */
-    public Evaluation(String ID_evaluation, String ID_detail, int note, String appreciation) {
+    public Evaluation(int ID_evaluation, int ID_detail, int note, String appreciation) {
         this.ID_evaluation = ID_evaluation;
-        this.ID_detail = new String();
+        this.ID_detail = ID_detail;
         this.note = note;
         this.appreciation = appreciation;
     }
     
     // Getters et Setters
 
-    public String getID_evaluation() {
+    public int getID_evaluation() {
         return ID_evaluation;
     }
 
-    public void setID_evaluation(String ID_evaluation) {
+    public void setID_evaluation(int ID_evaluation) {
         this.ID_evaluation = ID_evaluation;
     }
 
-    public String getID_detail() {
+    public int getID_detail() {
         return ID_detail;
     }
 
-    public void setID_detail(String ID_detail) {
+    public void setID_detail(int ID_detail) {
         this.ID_detail = ID_detail;
     }
 

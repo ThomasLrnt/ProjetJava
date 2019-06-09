@@ -17,14 +17,14 @@ import Model.*;
  */
 public class AnneeScolaire {
     // Déclaration des attributs
-    public String ID_annee;
+    public int ID_annee;
     private Trimestre T1, T2, T3;
     
     /** Constructeur par défaut :
      * 
      */
     public AnneeScolaire() {
-      ID_annee = new String();
+      ID_annee = 0;
       T1 = new Trimestre();
       T3 = new Trimestre();
       T2 = new Trimestre();
@@ -38,7 +38,7 @@ public class AnneeScolaire {
      * @param T2
      * @param T3 
      */
-    public AnneeScolaire(String ID_annee, Trimestre T1, Trimestre T2, Trimestre T3) {
+    public AnneeScolaire(int ID_annee, Trimestre T1, Trimestre T2, Trimestre T3) {
         this.ID_annee = ID_annee;
         this.T1 = T1;
         this.T2 = T2;
@@ -48,11 +48,11 @@ public class AnneeScolaire {
     
     // Getters et Setters
 
-    public String getID_annee() {
+    public int getID_annee() {
         return ID_annee;
     }
 
-    public void setID_annee(String ID_annee) {
+    public void setID_annee(int ID_annee) {
         this.ID_annee = ID_annee;
     }
 

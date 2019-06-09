@@ -17,12 +17,12 @@ import Model.*;
  */
 public class Discipline {
     // Déclaration des attributs
-    public String ID_discipline;
+    public int ID_discipline;
     public String nom;
     
     // Constructeur par défaut
     public Discipline(){
-       ID_discipline = new String();
+       ID_discipline = 0;
        nom = new String();
     }
 
@@ -31,7 +31,7 @@ public class Discipline {
      * @param ID_discipline
      * @param nom 
      */
-    public Discipline(String ID_discipline, String nom) {
+    public Discipline(int ID_discipline, String nom) {
         this.ID_discipline = ID_discipline;
         this.nom = nom;
     }
@@ -39,11 +39,11 @@ public class Discipline {
     
     // Getters et setters
 
-    public String getID_discipline() {
+    public int getID_discipline() {
         return ID_discipline;
     }
 
-    public void setID_discipline(String ID_discipline) {
+    public void setID_discipline(int ID_discipline) {
         this.ID_discipline = ID_discipline;
     }
 

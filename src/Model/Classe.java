@@ -17,19 +17,19 @@ import Model.*;
  */
 public class Classe {
     // Déclaration des attributs
-    public String ID_classe;
+    public int ID_classe;
     public String nom;
-    public String ID_ecole;
-    public String ID_niveau; 
-    public String ID_annee;
+    public int ID_ecole;
+    public int ID_niveau; 
+    public int ID_annee;
     
     // Constructeur par défaut
     public Classe(){
-        ID_classe = new String();
+        ID_classe = 0;
         nom  = new String();
-        ID_ecole = new String();
-        ID_niveau  = new String();
-        ID_annee  = new String();
+        ID_ecole = 0;
+        ID_niveau  = 0;
+        ID_annee  = 0;
     }
 
    /** Constructeur instanciant l'objet
@@ -40,7 +40,7 @@ public class Classe {
     * @param ID_niveau
     * @param ID_annee 
     */
-    public Classe(String ID_classe, String nom, String ID_ecole, String ID_niveau, String ID_annee) {
+    public Classe(int ID_classe, String nom, int ID_ecole, int ID_niveau, int ID_annee) {
         this.ID_classe = ID_classe;
         this.nom = nom;
         this.ID_ecole = ID_ecole;
@@ -51,11 +51,11 @@ public class Classe {
     
         // Getters et setters
 
-    public String getID_classe() {
+    public int getID_classe() {
         return ID_classe;
     }
 
-    public void setID_classe(String ID_classe) {
+    public void setID_classe(int ID_classe) {
         this.ID_classe = ID_classe;
     }
 
@@ -67,27 +67,27 @@ public class Classe {
         this.nom = nom;
     }
 
-    public String getID_ecole() {
+    public int getID_ecole() {
         return ID_ecole;
     }
 
-    public void setID_ecole(String ID_ecole) {
+    public void setID_ecole(int ID_ecole) {
         this.ID_ecole = ID_ecole;
     }
 
-    public String getID_niveau() {
+    public int getID_niveau() {
         return ID_niveau;
     }
 
-    public void setID_niveau(String ID_niveau) {
+    public void setID_niveau(int ID_niveau) {
         this.ID_niveau = ID_niveau;
     }
 
-    public String getID_annee() {
+    public int getID_annee() {
         return ID_annee;
     }
 
-    public void setID_annee(String ID_annee) {
+    public void setID_annee(int ID_annee) {
         this.ID_annee = ID_annee;
     }
 

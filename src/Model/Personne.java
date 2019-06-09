@@ -17,14 +17,14 @@ import Model.*;
  */
 public class Personne {
     // Déclaration des attributs
-    public String ID_personne;
+    public int ID_personne;
     public String nom;
     public String prenom;
     public String type;
     
     // Constructeur par défaut
     public Personne(){
-        ID_personne = new String();
+        ID_personne = 0;
         nom = new String();
         prenom = new String();
         type = new String();
@@ -37,7 +37,7 @@ public class Personne {
      * @param prenom
      * @param type 
      */
-    public Personne(String ID_personne, String nom, String prenom, String type) {
+    public Personne(int ID_personne, String nom, String prenom, String type) {
         this.ID_personne = ID_personne;
         this.nom = nom;
         this.prenom = prenom;
@@ -46,11 +46,11 @@ public class Personne {
     
     // Getters et Setters
 
-    public String getID_personne() {
+    public int getID_personne() {
         return ID_personne;
     }
 
-    public void setID_personne(String ID_personne) {
+    public void setID_personne(int ID_personne) {
         this.ID_personne = ID_personne;
     }
 
