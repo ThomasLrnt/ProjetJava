@@ -36,5 +36,23 @@ public class Niveau {
         this.nom = nom;
     }
     
+    // Getters et Setters
+
+    public String getID_niveau() {
+        return ID_niveau;
+    }
+
+    public void setID_niveau(String ID_niveau) {
+        this.ID_niveau = ID_niveau;
+    }
+
+    public String getNom() {
+        return nom;
+    }
+
+    public void setNom(String nom) {
+        this.nom = nom;
+    }
+    
     
 }

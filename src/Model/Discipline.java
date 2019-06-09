@@ -37,5 +37,26 @@ public class Discipline {
     }
     
     
+    // Getters et setters
+
+    public String getID_discipline() {
+        return ID_discipline;
+    }
+
+    public void setID_discipline(String ID_discipline) {
+        this.ID_discipline = ID_discipline;
+    }
+
+    public String getNom() {
+        return nom;
+    }
+
+    public void setNom(String nom) {
+        this.nom = nom;
+    }
+
+    
+    
+    
     
 }

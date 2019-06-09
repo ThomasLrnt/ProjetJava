@@ -18,31 +18,69 @@ import Model.*;
 public class DetailBulletin {
     // Déclaration des attributs
     public String ID_detail;
-    public Bulletin bulletin;
-    public Enseignant enseignant;
+    public String ID_bulletin;
+    public String ID_enseignant;
     public String appreciation;
     
     // Constructeur par défaut
     public DetailBulletin(){
         ID_detail = new String();
-        bulletin = new Bulletin();
-        enseignant = new Enseignant();
+        ID_bulletin = new String();
+        ID_enseignant = new String();
         appreciation = new String();
     }
 
     /** Constructeur instanciant l'objet
      * 
      * @param ID_detail
-     * @param bulletin
-     * @param enseignant
+     * @param ID_bulletin
+     * @param ID_enseignant
      * @param appreciation 
      */
-    public DetailBulletin(String ID_detail, Bulletin bulletin, Enseignant enseignant, String appreciation) {
+    public DetailBulletin(String ID_detail, String ID_bulletin, String ID_enseignant, String appreciation) {
         this.ID_detail = ID_detail;
-        this.bulletin = bulletin;
-        this.enseignant = enseignant;
+        this.ID_bulletin = ID_bulletin;
+        this.ID_enseignant = ID_enseignant;
         this.appreciation = appreciation;
     }
+
+    
+    // Getters et setters
+
+    public String getID_detail() {
+        return ID_detail;
+    }
+
+    public void setID_detail(String ID_detail) {
+        this.ID_detail = ID_detail;
+    }
+
+    public String getID_bulletin() {
+        return ID_bulletin;
+    }
+
+    public void setID_bulletin(String ID_bulletin) {
+        this.ID_bulletin = ID_bulletin;
+    }
+
+    public String getID_enseignant() {
+        return ID_enseignant;
+    }
+
+    public void setID_enseignant(String ID_enseignant) {
+        this.ID_enseignant = ID_enseignant;
+    }
+
+    public String getAppreciation() {
+        return appreciation;
+    }
+
+    public void setAppreciation(String appreciation) {
+        this.appreciation = appreciation;
+    }
+
+    
+    
     
     
     

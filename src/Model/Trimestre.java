@@ -49,4 +49,47 @@ public class Trimestre {
         this.ID_annee = ID_annee;
     }
     
+    // Getters et Setters
+
+    public String getID_trimestre() {
+        return ID_trimestre;
+    }
+
+    public void setID_trimestre(String ID_trimestre) {
+        this.ID_trimestre = ID_trimestre;
+    }
+
+    public int getNumero() {
+        return numero;
+    }
+
+    public void setNumero(int numero) {
+        this.numero = numero;
+    }
+
+    public int getDebut() {
+        return debut;
+    }
+
+    public void setDebut(int debut) {
+        this.debut = debut;
+    }
+
+    public int getFin() {
+        return fin;
+    }
+
+    public void setFin(int fin) {
+        this.fin = fin;
+    }
+
+    public String getID_annee() {
+        return ID_annee;
+    }
+
+    public void setID_annee(String ID_annee) {
+        this.ID_annee = ID_annee;
+    }
+    
+    
 }

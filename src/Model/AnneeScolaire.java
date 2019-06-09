@@ -44,5 +44,40 @@ public class AnneeScolaire {
         this.T2 = T2;
         this.T3 = T3;
     }
+    
+    
+    // Getters et Setters
+
+    public String getID_annee() {
+        return ID_annee;
+    }
+
+    public void setID_annee(String ID_annee) {
+        this.ID_annee = ID_annee;
+    }
+
+    public Trimestre getT1() {
+        return T1;
+    }
+
+    public void setT1(Trimestre T1) {
+        this.T1 = T1;
+    }
+
+    public Trimestre getT2() {
+        return T2;
+    }
+
+    public void setT2(Trimestre T2) {
+        this.T2 = T2;
+    }
+
+    public Trimestre getT3() {
+        return T3;
+    }
+
+    public void setT3(Trimestre T3) {
+        this.T3 = T3;
+    }
 
 }

@@ -19,34 +19,79 @@ public class Classe {
     // Déclaration des attributs
     public String ID_classe;
     public String nom;
-    public Ecole ecole;
-    public Niveau niveau; 
-    public AnneeScolaire annee;
+    public String ID_ecole;
+    public String ID_niveau; 
+    public String ID_annee;
     
     // Constructeur par défaut
     public Classe(){
         ID_classe = new String();
         nom  = new String();
-        ecole = new Ecole();
-        niveau  = new Niveau();
-        annee  = new AnneeScolaire();
+        ID_ecole = new String();
+        ID_niveau  = new String();
+        ID_annee  = new String();
     }
-    
+
    /** Constructeur instanciant l'objet
     * 
     * @param ID_classe
     * @param nom
-    * @param ecole
-    * @param niveau
-    * @param annee 
+    * @param ID_ecole
+    * @param ID_niveau
+    * @param ID_annee 
     */
-    public Classe(String ID_classe, String nom, Ecole ecole, Niveau niveau, AnneeScolaire annee) {
+    public Classe(String ID_classe, String nom, String ID_ecole, String ID_niveau, String ID_annee) {
         this.ID_classe = ID_classe;
         this.nom = nom;
-        this.ecole = ecole;
-        this.niveau = niveau;
-        this.annee = annee;
+        this.ID_ecole = ID_ecole;
+        this.ID_niveau = ID_niveau;
+        this.ID_annee = ID_annee;
     }
+    
+    
+        // Getters et setters
+
+    public String getID_classe() {
+        return ID_classe;
+    }
+
+    public void setID_classe(String ID_classe) {
+        this.ID_classe = ID_classe;
+    }
+
+    public String getNom() {
+        return nom;
+    }
+
+    public void setNom(String nom) {
+        this.nom = nom;
+    }
+
+    public String getID_ecole() {
+        return ID_ecole;
+    }
+
+    public void setID_ecole(String ID_ecole) {
+        this.ID_ecole = ID_ecole;
+    }
+
+    public String getID_niveau() {
+        return ID_niveau;
+    }
+
+    public void setID_niveau(String ID_niveau) {
+        this.ID_niveau = ID_niveau;
+    }
+
+    public String getID_annee() {
+        return ID_annee;
+    }
+
+    public void setID_annee(String ID_annee) {
+        this.ID_annee = ID_annee;
+    }
+
+    
     
     
 }

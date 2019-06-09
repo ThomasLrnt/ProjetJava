@@ -19,14 +19,14 @@ import Model.*;
 public class Evaluation {
     // Déclaration des attributs
     public String ID_evaluation;
-    public DetailBulletin detail;
+    public String ID_detail;
     public int note;
     public String appreciation;
     
     // Constructeur par défaut
     public Evaluation(){
         ID_evaluation = new String();
-        detail = new DetailBulletin();
+        ID_detail = new String();
         note = 0;
         appreciation = new String();
     }
@@ -34,13 +34,13 @@ public class Evaluation {
     /** Constructeur instanciant l'objet
      * 
      * @param ID_evaluation
-     * @param detail
+     * @param ID_detail
      * @param note
      * @param appreciation 
      */
-    public Evaluation(String ID_evaluation, DetailBulletin detail, int note, String appreciation) {
+    public Evaluation(String ID_evaluation, String ID_detail, int note, String appreciation) {
         this.ID_evaluation = ID_evaluation;
-        this.detail = detail;
+        this.ID_detail = new String();
         this.note = note;
         this.appreciation = appreciation;
     }

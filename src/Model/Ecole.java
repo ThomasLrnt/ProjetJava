@@ -38,6 +38,24 @@ public class Ecole {
     }
     
     
+    // Getters et setters
+
+    public String getID_ecole() {
+        return ID_ecole;
+    }
+
+    public void setID_ecole(String ID_ecole) {
+        this.ID_ecole = ID_ecole;
+    }
+
+    public String getNomEcole() {
+        return NomEcole;
+    }
+
+    public void setNomEcole(String NomEcole) {
+        this.NomEcole = NomEcole;
+    }
+
     
     
 }
