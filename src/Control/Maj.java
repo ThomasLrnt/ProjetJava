@@ -705,4 +705,45 @@ public class Maj {
     }
     
     
+    /*public void modifierEleve(String nom, String prenom) throws SQLException, ClassNotFoundException{
+       // Objet type connexion -> lien avec la base de donnée
+        Connexion maConnexion  = new Connexion(dbName,userName,password);
+        // Création de la requete SQL
+        String req = "SELECT * FROM personne WHERE nom='"+nom+"' AND prenom='"+prenom+"';";
+        ArrayList liste = maConnexion.remplirChampsRequete(req);
+        for (int i = 0; i < liste.size(); i++){
+            System.out.println(liste.get(i));
+        }
+    }
+    */
+
+    //      METHODES DE MODIFICATIONS
+    
+    /** Méthode permettant de changer un élève de classe
+     * 
+     * @param nom
+     * @param prenom
+     * @param nom_classe La nouvelle classe de l'élève
+     * @throws SQLException
+     * @throws ClassNotFoundException 
+     */
+    public void modifierClasse(String nom, String prenom, String nom_classe) throws SQLException, ClassNotFoundException{
+        // Objet type connexion -> lien avec la base de donnée
+        Connexion maConnexion  = new Connexion(dbName,userName,password);
+       
+        // Recherche de l'ID_personne d'un élève
+        String req1 = "SELECT id FROM personne WHERE nom='"+nom+"' AND prenom='"+prenom+"';";
+        ArrayList<String> liste1 = maConnexion.remplirChampsRequete(req1);
+        String id_personne = liste1.get(0);
+        
+        // Recherche de l'ID_classe de la nouvelle classe de l'élève
+        String req2 = "SELECT id FROM classe WHERE nom='"+nom_classe+"';";
+        ArrayList<String> liste2 = maConnexion.remplirChampsRequete(req2);
+        String id_classe = liste2.get(0);
+        
+        // Modification de la classe
+        String req3 = "UPDATE inscription SET id_classe = '"+id_classe+"' WHERE id_personne = '"+id_personne+"';";
+        maConnexion.executeUpdate(req3);
+        
+    }
 }

@@ -16,5 +16,10 @@ import Model.*;
 public class Reporting {
     
     
-    
+    public double calculMoyenne(){
+        double val = 0;
+        int nbr = 1 ;
+        
+        return val/nbr;
+    }  
 }

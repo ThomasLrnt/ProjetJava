@@ -26,7 +26,7 @@ public class ProjetJava {
      * @throws SQLException
      * @throws ClassNotFoundException 
      */
-    public static void main(String[] args) throws SQLException, ClassNotFoundException {
+    public static void main(String[] args) throws SQLException, ClassNotFoundException, ErreurCleEtrangere, DejaExistant {
         
         Maj maMaj = new Maj();
         
@@ -61,7 +61,8 @@ public class ProjetJava {
         // maMaj.supprimerEcole("ECE Paris"); OK
         // maMaj.supprimerAnnee(20172018); OK
         
-        
+        // maMaj.ajoutClasse(2, "ING3 TDS8", 1, 42, 20182019); OK
+        maMaj.modifierClasse("Laurent", "Thomas", "ING3 TDS9"); 
         
     }
     
