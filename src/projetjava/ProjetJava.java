@@ -13,6 +13,7 @@ import java.sql.SQLException;
 import Control.*;
 import Exceptions.*;
 import Model.*;
+import vue.*;
 
 
 /**
@@ -28,7 +29,8 @@ public class ProjetJava {
      */
     public static void main(String[] args) throws SQLException, ClassNotFoundException, ErreurCleEtrangere, DejaExistant {
         
-        Maj maMaj = new Maj();
+        new PageLogin().setVisible(true);
+        
         
         //                   TEST DES FONCTIONS
         
@@ -62,7 +64,7 @@ public class ProjetJava {
         // maMaj.supprimerAnnee(20172018); OK
         
         // maMaj.ajoutClasse(2, "ING3 TDS8", 1, 42, 20182019); OK
-        maMaj.modifierClasse("Laurent", "Thomas", "ING3 TDS9"); 
+        // maMaj.modifierClasse("Laurent", "Thomas", "ING3 TDS9"); OK
         
     }
     

@@ -728,6 +728,7 @@ public class Maj {
      * @throws ClassNotFoundException 
      */
     public void modifierClasse(String nom, String prenom, String nom_classe) throws SQLException, ClassNotFoundException{
+        try{
         // Objet type connexion -> lien avec la base de donnée
         Connexion maConnexion  = new Connexion(dbName,userName,password);
        
@@ -744,6 +745,9 @@ public class Maj {
         // Modification de la classe
         String req3 = "UPDATE inscription SET id_classe = '"+id_classe+"' WHERE id_personne = '"+id_personne+"';";
         maConnexion.executeUpdate(req3);
+        }catch(SQLException e){
+            
+        }
         
     }
 }
