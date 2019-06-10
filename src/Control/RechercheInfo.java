@@ -26,7 +26,7 @@ public class RechercheInfo {
     
     // Méthodes de recherche d'une classe
     
-    // Méthodes de recherche d'une Dsicipline
+    // Méthodes de recherche d'une Dicipline
     
     // Méthodes de recherche d'une personne
     

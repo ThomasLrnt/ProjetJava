@@ -28,4 +28,9 @@ public class DejaExistant extends Exception {
     public DejaExistant(String msg) {
         super(msg);
     }
+    
+    @Override
+    public String getMessage() {
+        return "L'objet est déja présent dans la table"; //To change body of generated methods, choose Tools | Templates.
+    }
 }

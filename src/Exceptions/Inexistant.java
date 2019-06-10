@@ -26,4 +26,9 @@ public class Inexistant extends Exception {
     public Inexistant(String msg) {
         super(msg);
     }
+    
+    @Override
+    public String getMessage() {
+        return "L'objet n'est pas présent dans la table"; //To change body of generated methods, choose Tools | Templates.
+    }
 }
