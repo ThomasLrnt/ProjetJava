@@ -47,7 +47,19 @@ public class ProjetJava {
         // maMaj.ajoutDetailBulletin(1, 1, 1, "Mon appreciation est très positive !"); OK
         // maMaj.ajoutEvaluation(1, 1, 19, "Mon appreciation est extrèmement positive !!"); OK
         
-        
+        // maMaj.supprimerEvaluation(1); OK
+        // maMaj.supprimerDetailBulletin(1); OK
+        // maMaj.supprimerBulletin(1, 1); OK
+        // maMaj.supprimerInscription(1); OK
+        // maMaj.supprimerEnseignant(1); OK
+        // maMaj.supprimerPersonne("Descottes", "Martin"); OK
+        // maMaj.supprimerPersonne("Laurent", "Thomas"); OK
+        // maMaj.supprimerClasse(1); OK
+        // maMaj.supprimerNiveau("ING3"); OK
+        // maMaj.supprimerTrimestre(2, 20182019); OK
+        // maMaj.supprimerDiscipline(1); OK
+        // maMaj.supprimerEcole("ECE Paris"); OK
+        // maMaj.supprimerAnnee(20172018); OK
         
         
         

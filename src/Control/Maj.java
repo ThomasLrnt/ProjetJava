@@ -268,7 +268,7 @@ public class Maj {
         // Objet type connexion -> lien avec la base de donnée
         Connexion maConnexion  = new Connexion(dbName,userName,password);
         // Création de la requete SQL
-        String req = "DELETE FROM ecole WHERE nom="+nom+";";
+        String req = "DELETE FROM ecole WHERE nom='"+nom+"';";
         // Execution de la mise à jour
         maConnexion.executeUpdate(req);
     }
@@ -299,7 +299,7 @@ public class Maj {
         // Objet type connexion -> lien avec la base de donnée
         Connexion maConnexion  = new Connexion(dbName,userName,password);
         // Création de la requete SQL
-        String req = "DELETE FROM niveau WHERE nom ="+nom+";";
+        String req = "DELETE FROM niveau WHERE nom ='"+nom+"';";
         // Execution de la mise à jour
         maConnexion.executeUpdate(req);
     }
@@ -345,7 +345,7 @@ public class Maj {
         // Objet type connexion -> lien avec la base de donnée
         Connexion maConnexion  = new Connexion(dbName,userName,password);
         // Création de la requete SQL
-        String req = "DELETE FROM personne WHERE nom="+nom+" AND prenom="+prenom+";";
+        String req = "DELETE FROM personne WHERE nom='"+nom+"' AND prenom='"+prenom+"';";
         // Execution de la mise à jour
         maConnexion.executeUpdate(req);
     }
@@ -402,11 +402,11 @@ public class Maj {
      * @throws SQLException
      * @throws ClassNotFoundException 
      */
-    public void supprimerDetailBulletin(String appreciation) throws SQLException, ClassNotFoundException{
+    public void supprimerDetailBulletin(int id) throws SQLException, ClassNotFoundException{
         // Objet type connexion -> lien avec la base de donnée
         Connexion maConnexion  = new Connexion(dbName,userName,password);
         // Création de la requete SQL
-        String req = "DELETE FROM detail_bulletin WHERE appreciation="+appreciation+";";
+        String req = "DELETE FROM detail_bulletin WHERE id="+id+";";
         // Execution de la mise à jour
         maConnexion.executeUpdate(req);
     }
@@ -421,7 +421,7 @@ public class Maj {
         // Objet type connexion -> lien avec la base de donnée
         Connexion maConnexion  = new Connexion(dbName,userName,password);
         // Création de la requete SQL
-        String req = "DELETE FROM annee_scolaire WHERE id="+id+";";
+        String req = "DELETE FROM evaluation WHERE id="+id+";";
         // Execution de la mise à jour
         maConnexion.executeUpdate(req);
     }
