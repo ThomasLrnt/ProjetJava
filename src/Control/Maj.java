@@ -21,7 +21,6 @@ public class Maj {
     final String dbName = "gestion_ecole";
     final String userName = "root";
     final String password = "";
-    // Objet type connexion -> lien avec la base de donnée
     
     
     

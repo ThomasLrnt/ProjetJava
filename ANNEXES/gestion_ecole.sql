@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.8.5
+-- version 4.8.4
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1:3306
--- Généré le :  sam. 08 juin 2019 à 13:54
--- Version du serveur :  5.7.26
--- Version de PHP :  7.2.18
+-- Généré le :  lun. 10 juin 2019 à 13:05
+-- Version du serveur :  5.7.24
+-- Version de PHP :  7.2.14
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -30,9 +30,9 @@ SET time_zone = "+00:00";
 
 DROP TABLE IF EXISTS `annee_scolaire`;
 CREATE TABLE IF NOT EXISTS `annee_scolaire` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `id` int(25) NOT NULL AUTO_INCREMENT,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=20182020 DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
 
@@ -45,11 +45,11 @@ CREATE TABLE IF NOT EXISTS `bulletin` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `id_trimestre` int(11) NOT NULL,
   `id_inscription` int(11) NOT NULL,
-  `appreciation` text NOT NULL,
+  `appreciation` text CHARACTER SET utf8 NOT NULL,
   PRIMARY KEY (`id`),
   KEY `id_inscription` (`id_inscription`),
   KEY `id_trimestre` (`id_trimestre`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
 
@@ -60,7 +60,7 @@ CREATE TABLE IF NOT EXISTS `bulletin` (
 DROP TABLE IF EXISTS `classe`;
 CREATE TABLE IF NOT EXISTS `classe` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
-  `nom` varchar(255) NOT NULL,
+  `nom` varchar(255) CHARACTER SET utf8 NOT NULL,
   `id_ecole` int(11) NOT NULL,
   `id_niveau` int(11) NOT NULL,
   `id_annee_scolaire` int(11) NOT NULL,
@@ -68,7 +68,7 @@ CREATE TABLE IF NOT EXISTS `classe` (
   KEY `id_annee_scolaire` (`id_annee_scolaire`),
   KEY `id_ecole` (`id_ecole`),
   KEY `id_niveau` (`id_niveau`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
 
@@ -81,11 +81,11 @@ CREATE TABLE IF NOT EXISTS `detail_bulletin` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `id_bulletin` int(11) NOT NULL,
   `id_enseignement` int(11) NOT NULL,
-  `appreciation` text NOT NULL,
+  `appreciation` text CHARACTER SET utf8mb4 NOT NULL,
   PRIMARY KEY (`id`),
   KEY `id_bulletin` (`id_bulletin`),
   KEY `id_enseignement` (`id_enseignement`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
 
@@ -98,7 +98,7 @@ CREATE TABLE IF NOT EXISTS `discipline` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `nom` varchar(255) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
 
@@ -111,7 +111,7 @@ CREATE TABLE IF NOT EXISTS `ecole` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `nom` varchar(255) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
 
@@ -129,7 +129,7 @@ CREATE TABLE IF NOT EXISTS `enseignement` (
   KEY `id_classe` (`id_classe`),
   KEY `id_discipline` (`id_discipline`),
   KEY `id_personne` (`id_personne`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
 
@@ -141,11 +141,11 @@ DROP TABLE IF EXISTS `evaluation`;
 CREATE TABLE IF NOT EXISTS `evaluation` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `id_detail_bulletin` int(11) NOT NULL,
-  `note` int(11) NOT NULL,
-  `appreciation` text NOT NULL,
+  `note` int(2) NOT NULL,
+  `appreciation` text CHARACTER SET utf8 NOT NULL,
   PRIMARY KEY (`id`),
   KEY `id_detail_bulletin` (`id_detail_bulletin`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
 
@@ -161,7 +161,7 @@ CREATE TABLE IF NOT EXISTS `inscription` (
   PRIMARY KEY (`id`),
   KEY `id_classe` (`id_classe`),
   KEY `id_personne` (`id_personne`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
 
@@ -172,9 +172,9 @@ CREATE TABLE IF NOT EXISTS `inscription` (
 DROP TABLE IF EXISTS `niveau`;
 CREATE TABLE IF NOT EXISTS `niveau` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
-  `nom` int(11) NOT NULL,
+  `nom` varchar(255) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=43 DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
 
@@ -185,11 +185,11 @@ CREATE TABLE IF NOT EXISTS `niveau` (
 DROP TABLE IF EXISTS `personne`;
 CREATE TABLE IF NOT EXISTS `personne` (
   `id` int(100) NOT NULL AUTO_INCREMENT,
-  `nom` varchar(255) NOT NULL,
-  `prenom` varchar(255) NOT NULL,
-  `type` int(5) NOT NULL,
+  `nom` varchar(255) CHARACTER SET utf8 NOT NULL,
+  `prenom` varchar(255) CHARACTER SET utf8 NOT NULL,
+  `type` varchar(11) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=14 DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
 
@@ -206,7 +206,7 @@ CREATE TABLE IF NOT EXISTS `trimestre` (
   `id_annee_scolaire` int(11) NOT NULL,
   PRIMARY KEY (`id`),
   KEY `id_annee_scolaire` (`id_annee_scolaire`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=latin1;
 
 --
 -- Contraintes pour les tables déchargées
