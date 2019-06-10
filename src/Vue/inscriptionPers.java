@@ -212,8 +212,6 @@ public class inscriptionPers extends javax.swing.JFrame {
                 .addGap(28, 28, 28))
         );
 
-        label2.getAccessibleContext().setAccessibleName("Classe :");
-
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
