@@ -25,6 +25,7 @@ public class Maj {
     
     
     
+    
     //    LES METHODES D'AJOUT DANS LA BASE DE DONEE
     
     /** Méthodes d'ajout d'une année scolaire
@@ -56,7 +57,7 @@ public class Maj {
         // Objet type connexion -> lien avec la base de donnée
         Connexion maConnexion  = new Connexion(dbName,userName,password);
         // Création de la requete SQL
-        String req = "INSERT INTO ecole ('id','nom') VALUES ("+id+","+nom+");";
+        String req = "INSERT INTO ecole (id,nom) VALUES ('"+id+"','"+nom+"');";
         // Execution de la mise à jour
         maConnexion.executeUpdate(req);
     }
@@ -75,7 +76,7 @@ public class Maj {
         // Objet type connexion -> lien avec la base de donnée
         Connexion maConnexion  = new Connexion(dbName,userName,password);
         // Création de la requete SQL
-        String req = "INSERT INTO trimestre ('id', 'numero', 'debut', 'fin', 'id_annee_scolaire') VALUES ("+id+","+num+","+debut+","+fin+","+id_annee+");";
+        String req = "INSERT INTO trimestre (id, numero, debut, fin, id_annee_scolaire) VALUES ('"+id+"','"+num+"','"+debut+"','"+fin+"','"+id_annee+"');";
         // Execution de la mise à jour
         maConnexion.executeUpdate(req);
     }
@@ -91,7 +92,7 @@ public class Maj {
         // Objet type connexion -> lien avec la base de donnée
         Connexion maConnexion  = new Connexion(dbName,userName,password);
         // Création de la requete SQL
-        String req = "INSERT INTO niveau ('id', 'nom') VALUES ("+id+","+nom+");";
+        String req = "INSERT INTO niveau (id,nom) VALUES ('"+id+"','"+nom+"');";
         // Execution de la mise à jour
         maConnexion.executeUpdate(req);
     }
@@ -110,7 +111,7 @@ public class Maj {
         // Objet type connexion -> lien avec la base de donnée
         Connexion maConnexion  = new Connexion(dbName,userName,password);
         // Création de la requete SQL
-        String req = "INSERT INTO classe ('id', 'nom', 'id_ecole', 'id_niveau', 'id_annee_scolaire') VALUES ("+ id +","+ nom +","+ id_ecole+","+id_niveau+","+id_annee+");";
+        String req = "INSERT INTO classe (id, nom, id_ecole, id_niveau, id_annee_scolaire) VALUES ('"+ id +"','"+ nom +"','"+ id_ecole+"','"+id_niveau+"','"+id_annee+"');";
         // Execution de la mise à jour
         maConnexion.executeUpdate(req);
     }
@@ -126,7 +127,7 @@ public class Maj {
         // Objet type connexion -> lien avec la base de donnée
         Connexion maConnexion  = new Connexion(dbName,userName,password);
         // Création de la requete SQL
-        String req = "INSERT INTO discipline ('id', 'nom') VALUES ("+id+","+nom+");";
+        String req = "INSERT INTO discipline (id, nom) VALUES ('"+id+"','"+nom+"');";
         // Execution de la mise à jour
         maConnexion.executeUpdate(req);
     }
@@ -144,7 +145,7 @@ public class Maj {
         // Objet type connexion -> lien avec la base de donnée
         Connexion maConnexion  = new Connexion(dbName,userName,password);
         // Création de la requete SQL
-        String req = "INSERT INTO personne ('id', 'nom', 'prenom', 'type') VALUES ("+id+","+nom+","+prenom+","+type+");";
+        String req = "INSERT INTO personne (id, nom, prenom, type) VALUES ('"+id+"','"+nom+"','"+prenom+"','"+type+"');";
         // Execution de la mise à jour
         maConnexion.executeUpdate(req);
     }
@@ -162,7 +163,7 @@ public class Maj {
         // Objet type connexion -> lien avec la base de donnée
         Connexion maConnexion  = new Connexion(dbName,userName,password);
         // Création de la requete SQL
-        String req = "INSERT INTO enseignement ('id', 'id_classe', 'id_discipline', 'id_personne') VALUES ("+id+","+id_classe+","+id_discipline+","+id_personne+");";
+        String req = "INSERT INTO enseignement (id, id_classe, id_discipline, id_personne) VALUES ('"+id+"','"+id_classe+"','"+id_discipline+"','"+id_personne+"');";
         // Execution de la mise à jour
         maConnexion.executeUpdate(req);
     }
@@ -179,7 +180,7 @@ public class Maj {
         // Objet type connexion -> lien avec la base de donnée
         Connexion maConnexion  = new Connexion(dbName,userName,password);
         // Création de la requete SQL
-        String req = "INSERT INTO inscription ('id', 'id_classe', 'id_personne') VALUES ("+id+","+id_classe+","+id_personne+");";
+        String req = "INSERT INTO inscription (id, id_classe, id_personne) VALUES ('"+id+"','"+id_classe+"','"+id_personne+"');";
         // Execution de la mise à jour
         maConnexion.executeUpdate(req);
     }
@@ -197,7 +198,7 @@ public class Maj {
         // Objet type connexion -> lien avec la base de donnée
         Connexion maConnexion  = new Connexion(dbName,userName,password);
         // Création de la requete SQL
-        String req = "INSERT INTO bulletin (id, id_trimestre, id_inscription, appreciation) VALUES ("+id+","+id_trimestre+","+id_inscription+","+appreciation+");";
+        String req = "INSERT INTO bulletin (id, id_trimestre, id_inscription, appreciation) VALUES ('"+id+"','"+id_trimestre+"','"+id_inscription+"','"+appreciation+"');";
         // Execution de la mise à jour
         maConnexion.executeUpdate(req);
     }
@@ -215,7 +216,7 @@ public class Maj {
         // Objet type connexion -> lien avec la base de donnée
         Connexion maConnexion  = new Connexion(dbName,userName,password);
         // Création de la requete SQL
-        String req = "INSERT INTO detail_bulletin ('id', 'id_bulletin', 'id_enseignement', 'appreciation') VALUES ("+id+","+id_bulletin+","+id_enseignant+","+appreciation+");";
+        String req = "INSERT INTO detail_bulletin (id, id_bulletin, id_enseignement, appreciation) VALUES ('"+id+"','"+id_bulletin+"','"+id_enseignant+"','"+appreciation+"');";
         // Execution de la mise à jour
         maConnexion.executeUpdate(req);
     }
@@ -233,7 +234,7 @@ public class Maj {
         // Objet type connexion -> lien avec la base de donnée
         Connexion maConnexion  = new Connexion(dbName,userName,password);
         // Création de la requete SQL
-        String req = "INSERT INTO evaluation ('id', 'id_detail_bulletin', 'note', 'appreciation') VALUES ("+id+","+id_detail_bulletin+","+note+","+appreciation+");";
+        String req = "INSERT INTO evaluation (id, id_detail_bulletin, note, appreciation) VALUES ('"+id+"','"+id_detail_bulletin+"','"+note+"','"+appreciation+"');";
         // Execution de la mise à jour
         maConnexion.executeUpdate(req);
     }
